@@ -1,0 +1,16 @@
+//media queries
+$mobileVp: 450px;
+$tabletVp: 768px;
+$largeVp: 1000px;
+
+//colors
+$white: #fff;
+$LGrey: #C9C9C9;
+$DGrey: #4E4E4E;
+$black: #000000;
+
+//responsive assets
+@mixin flex{
+  display: flex;
+  flex-wrap: wrap;
+}

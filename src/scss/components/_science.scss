@@ -1,0 +1,75 @@
+.science-section{
+  background-color: $DGrey;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  position: relative;
+  p{
+    font-style: italic;
+    margin: 0;
+  }
+  .card-contain{
+    padding: 0 10%;
+    position: relative;
+    bottom: -100px;
+    margin-top: -80px;
+    @media screen and (max-width: $largeVp){
+      padding: 20px;
+    }
+    @media screen and (max-width: $tabletVp){
+      position: static;
+      bottom: 0;
+      margin-top: 0;
+    }
+    .card-wrap{
+      @include flex;
+      justify-content: center;
+      padding-top: 20px;
+      width: 100%;
+      .card{
+        width: calc(50% - 120px);
+        background-color: $white;
+        min-height: 100px;
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.65);
+        margin: 0 60px;
+        @include flex;
+        @media screen and (max-width: $largeVp){
+          width: calc(50% - 60px);
+          margin: 0 30px
+        }
+        @media screen and (max-width: $tabletVp){
+          width: 100%;
+          margin: 20px 0;
+        }
+        p{
+          font-style: normal;
+        }
+        .content{
+          color: $DGrey;
+          padding: 40px 15px;
+          width: 100%;
+          h3{
+            margin-top: 0;
+          }
+          p{
+            font-size: 16px;
+          }
+          .explain{
+            padding: 15px 22% 0 22%;
+          }
+        }
+        .lower-content{
+          background-color: $DGrey;
+          padding: 20px;
+          width: 100%;
+          p{
+            font-size: 25px;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: $DGrey;
+  z-index: 900;
+  .header-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .brand{
+      min-width: 151px;
+      width: 25%;
+      padding: 0 0 0 20px;
+    }
+    nav{
+      width: 50%;
+      padding-right: 20px;
+      @media screen and (max-width: $tabletVp){
+        display: none;
+      }
+      ul{
+        list-style: none;
+        padding: 20px 0 0 0;
+        margin: 0;
+        @include flex;
+        justify-content: space-between;
+        width: 100%;
+        a{
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+          li{
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  #mobile-icon{
+    display: none;
+    @media screen and (max-width: $tabletVp){
+      display: block;
+      width: 60px;
+      height: 45px;
+      position: relative;
+      margin-right: 20px;
+      transform: rotate(0deg);
+      transition: .5s ease-in-out;
+      cursor: pointer;
+    }
+    span{
+      display: block;
+      position: absolute;
+      height: 9px;
+      width: 100%;
+      background: $LGrey;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+  }
+  #mobile-icon span:nth-child(1) {
+    top: 0px;
+  }
+  
+  #mobile-icon span:nth-child(2) {
+    top: 18px;
+  }
+  
+  #mobile-icon span:nth-child(3) {
+    top: 36px;
+  }
+
+  #mobile-icon.open span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  
+  #mobile-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  #mobile-icon.open span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+}

@@ -1,0 +1,40 @@
+.target-section{
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 50px 20px;
+  text-align: center;
+  p{
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 900;
+  }
+  h2{
+    letter-spacing: 0.08em;
+    font-size: 60px;
+    display: block;
+    position: relative;
+    margin: 45px 0;
+    font-style: italic;
+    &::before{
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 5px;
+      background-color: $DGrey;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 5px;
+      background-color: $DGrey;
+    }
+  }
+}
